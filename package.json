@@ -1,0 +1,30 @@
+{
+    "name": "code-monkeys-ecs",
+    "version": "1.0.0",
+    "description": "ECS Demo for Code Monkeys",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/blinkdog/code-monkeys-ecs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "AGPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/blinkdog/code-monkeys-ecs/issues"
+    },
+    "homepage": "https://github.com/blinkdog/code-monkeys-ecs#readme",
+    "devDependencies": {
+        "browserify": "16.5.1",
+        "coffeescript": "2.5.1",
+        "mocha": "7.1.2",
+        "nyc": "15.0.1",
+        "should": "13.2.3"
+    },
+    "dependencies": {
+        "rot-js": "2.1.1"
+    }
+}

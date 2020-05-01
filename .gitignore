@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# code-monkeys-ecs project specific ignores
+/code-monkeys-ecs.js
+/code-monkeys-ecs*.tar.xz
+/lib
+/test
