@@ -23,12 +23,5 @@ describe "demo", ->
         false.should.equal false
         true.should.equal true
 
-    it "should supply a friendly message", ->
-        mut.MESSAGE.should.be.a.String()
-        mut.MESSAGE.should.eql "Hello, Code-Monkeys!"
-
-    xit "should print a friendly message", ->
-        mut.run()
-
 #----------------------------------------------------------------------
 # end of demoTest.coffee

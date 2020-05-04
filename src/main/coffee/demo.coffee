@@ -17,11 +17,32 @@
 
 ROT = require "rot-js"
 
-exports.MESSAGE = MESSAGE = "Hello, Code-Monkeys!"
+Demo =
+    animationFrame: 0
+    timestamp: 0
 
 exports.run = ->
-    console.log MESSAGE
-    console.log "There is a #{ROT.RNG.getPercentage()}% chance you'll like this game!"
+    # begin running the game
+    requestAnimationFrame nextFrame
+
+doFrame = (timestamp) ->
+    # update our metrics tracking object
+    Demo.animationFrame++
+    Demo.timestamp = timestamp
+
+nextFrame = (timestamp) ->
+    # safely run the frame and request the next one
+    try
+        doFrame timestamp
+    catch error
+        console.log "Error rendering frame: #{error}"
+    requestAnimationFrame nextFrame
+
+# API: make some things available to the browser
+isBrowser = new Function "try{return this===window;}catch(e){return false;}"
+if isBrowser()
+    window.API.Demo = Demo
+    window.API.ROT = ROT
 
 #----------------------------------------------------------------------
 # end of demo.coffee
